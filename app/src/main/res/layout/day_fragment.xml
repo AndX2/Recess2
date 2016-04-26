@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day_of_week"
+            android:text="monday  "
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/titleTextSizeSmall" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/day_of_month"
+            android:text="26"
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/titleTextSizeBig" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/month"
+            android:text="  april"
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/titleTextSizeSmall" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/syllabus_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_gravity="center">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

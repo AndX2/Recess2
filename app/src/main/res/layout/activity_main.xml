@@ -3,10 +3,182 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ru.yandex.anroid.andrew.recess2.view.MainActivity">
+    tools:context="ru.yandex.anroid.andrew.recess2.view.MainActivity"
+    android:background="@color/colorPrimary">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:src="@drawable/ic_mode_edit_white_24dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_alignBottom="@+id/next_day_title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        app:rippleColor="@color/colorDivider">
+
+    </android.support.design.widget.FloatingActionButton>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/state_container">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_setting"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_settings_white_24dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_share"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_share_white_24dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/btn_setting"
+        android:layout_toLeftOf="@id/btn_share"
+        android:layout_toRightOf="@id/btn_setting"
+
+        android:gravity="center"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_day_of_week"
+            android:text="monday  "
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/titleTextSizeSmall" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_day_of_month"
+            android:text="26"
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/titleTextSizeBig" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_month"
+            android:text="  april"
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/titleTextSizeSmall" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/state_container"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_below="@+id/btn_setting"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/state_icon"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_volume_up_white_48dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="@drawable/gradient_right"
+        android:orientation="vertical"
+        android:id="@+id/next_day_title"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/state_container"
+        android:gravity="center">
+
+        <ru.yandex.anroid.andrew.recess2.custom.VerticalTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/next_day_month"
+            android:text="  april  "
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/edgeTextSizeSmall" />
+
+        <ru.yandex.anroid.andrew.recess2.custom.VerticalTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/next_day_of_month"
+            android:text="  26  "
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/edgeTextSizeBig" />
+
+        <ru.yandex.anroid.andrew.recess2.custom.VerticalTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/next_day_of_week"
+            android:text="monday  "
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/edgeTextSizeSmall" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/gradient_left"
+        android:orientation="vertical"
+        android:id="@+id/prev_day_title"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/state_container"
+        android:gravity="center">
+
+        <ru.yandex.anroid.andrew.recess2.custom.VerticalTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prev_day_month"
+            android:text="  april"
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/edgeTextSizeSmall" />
+
+        <ru.yandex.anroid.andrew.recess2.custom.VerticalTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prev_day_of_month"
+            android:text="  26  "
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/edgeTextSizeBig" />
+
+        <ru.yandex.anroid.andrew.recess2.custom.VerticalTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prev_day_of_week"
+            android:text="monday  "
+            android:textColor="@color/colorTextIcon"
+            android:textSize="@dimen/edgeTextSizeSmall" />
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>

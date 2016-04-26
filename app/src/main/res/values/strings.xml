@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Recess2</string>
+    <string name="time_divider">...</string>
 </resources>
