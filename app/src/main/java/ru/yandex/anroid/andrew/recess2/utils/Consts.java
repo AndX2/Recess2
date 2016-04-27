@@ -13,4 +13,7 @@ public class Consts {
     public static final int REQUEST_CODE_REBOOT_RECEIVER = 11223344;
     public static final int TIMEOUT_RESTART_SERVICE_HOUR = 4;
 
+    public static final String CURRENT_TIME_KEY_DAYFRAGMENT = "currentTime";
+    public static final String NUMBER_DAY_OF_WEEK_KEY_DAYFRAGMENT = "numberDayOfWeek";
+
 }
